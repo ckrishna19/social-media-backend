@@ -21,5 +21,5 @@ app.use("/user", userRouter);
 app.use("/message", auth, messageRouter);
 app.use("/post", postRouter);
 app.use("/comment", auth, commentRoute);
-const port = 3001;
+const port = process.env.port || 3001;
 app.listen(port, () => console.log(`server is listining in port ${port}`));
