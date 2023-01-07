@@ -17,6 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 // router part
+app.get("/", (req, res) => {
+	return res.send("working");
+});
 app.use("/user", userRouter);
 app.use("/message", auth, messageRouter);
 app.use("/post", postRouter);
