@@ -8,5 +8,6 @@ router.post("/:id/like", Post.likePost);
 router.post("/:id/unLike", Post.unLikePost);
 router.get("/:id/single", Post.getAllPostBySingleUser);
 router.get("/:id", Post.getSinglePost);
+router.get("/all", Post.getAllPost);
 
 module.exports = router;
